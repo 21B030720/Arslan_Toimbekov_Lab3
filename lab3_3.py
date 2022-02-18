@@ -7,6 +7,13 @@ class Data:
             if float(i["imdb"]) >= min:
                 print(i["name"])
         print()
+    def check(self, name):
+        for i in self.movies:
+            if i["name"] == name:
+                if float(i["imdb"]) >= 5.5:
+                    print(True)
+                else:
+                    print(False)
     def category(self, cat):
         for i in self.movies:
             if i["category"] == cat:
@@ -33,3 +40,4 @@ m.bests(float(input()))
 m.category(input())
 m.average_imdb()
 m.average_imdb_category(input())
+m.check(input())
